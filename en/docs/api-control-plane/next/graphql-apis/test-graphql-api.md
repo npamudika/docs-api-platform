@@ -49,7 +49,29 @@ Deploy the GraphQL API to at least one gateway. For more information, see [Deplo
     }
     ```
 
-5. If the API has an authentication policy, add the required header in the headers editor. For example, add an API key or an `Authorization` header.
+5. If the API has an authentication policy, add the required header in the headers editor as a JSON object. Use the header that matches the policy:
+
+    === "API key"
+
+        The `api-key-auth` policy reads the key from the `API-Key` header by default:
+
+        ```json
+        {
+          "API-Key": "<api-key>"
+        }
+        ```
+
+        If the policy sets a different header name in its `key` parameter, use that name instead. To create a key, see [Manage API keys for a GraphQL API](manage-api-keys.md).
+
+    === "JWT"
+
+        The `jwt-auth` policy reads a bearer token from the `Authorization` header by default:
+
+        ```json
+        {
+          "Authorization": "Bearer <access-token>"
+        }
+        ```
 6. Run the query. The response appears in the result pane.
 
 The console sends every request as a `POST` request to the selected gateway.
