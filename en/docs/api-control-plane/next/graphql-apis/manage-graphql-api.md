@@ -45,4 +45,4 @@ To apply a changed endpoint on a gateway, redeploy the API. For more information
 
 ## Gateway-managed GraphQL APIs
 
-If a GraphQL API was created directly on a gateway and synchronized to the control plane, the overview page labels it **Gateway-managed**. You can view a gateway-managed API in the console, but you can't edit or deploy it from the control plane.
+If a GraphQL API was created directly on a gateway and synchronized to the control plane, the overview page labels it **Gateway-managed**. You can view a gateway-managed API in the console, but you can't edit or deploy it from the control plane. To deploy and manage GraphQL APIs directly on a gateway, see [Deploy a GraphQL API to the Gateway](../../../api-gateway/next/deployment/deploying-apis/graphql-api-deployment.md).
